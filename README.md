@@ -2,9 +2,15 @@
 
 The main idea of this project is to make something similar than [NodeCG](https://node.dev) but full compatible with Bun. Anyway the idea is not to provide something 100% compatible with it, but something that can be used to create graphics for live streaming and control them.
 
+Why? This is explained in this document. Mainly has some fails, its old code and Bun performance is better than Node in general. But, the main reason, is because I want to use this kind of project in the same way I use nextjs which mean by installing as dependency and not as we do in NodeCG by using bundles.
+
+Of course there is the knowledge that this project will provide me and I think is useful project for others.
+
 # Ideas and goals
 
 **IMPORTANT**: This project is still in development, so it's not ready to be used yet in fact there is no code yet that can be used.
+
+You can propose any ideas [in discussions](https://github.com/gtrabanco/buncg/discussions) or rebate any decision, roadmap or something that it is in this document.
 
 ## How it should work
 
@@ -67,6 +73,7 @@ Each task has all the subtasks that are needed to be done to complete it which m
 - [ ] Authentication and authorization.
 - [ ] JSON Schema as NodeCG does?
 - [ ] Explore Viewtransitions and make possible to use transitions when switching scenes.
+- [ ] Logo for the project. I am not able to do this so I am open to all kind of proposals.
 
 ## Technologies
 
