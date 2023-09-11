@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "prepare": "relative-deps",
+    "start": "buncg"
+  },
+  "devDependencies": {
+    "bun-types": "1.0.1"
+  },
+  "peerDependencies": {
+    "buncg": "latest",
+    "typescript": "5.2.2"
+  },
+  "dependencies": {
+    "relative-deps": "1.0.7"
+  },
+  "relativeDependencies": {
+    "buncg": ".."
+  }
+}
