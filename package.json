@@ -5,20 +5,27 @@
   "bin": {
     "buncg": "./src/cli/index.ts"
   },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/gtrabanco/buncg.git"
   },
   "scripts": {
-    "cli": "bun run src/cli/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "prepare": "husky install",
+    "lint": "bunx biome check",
+    "fmt": "bunx biome format"
   },
   "dependencies": {
     "elysia": "0.6.21"
   },
   "devDependencies": {
-    "bun-types": "1.0.1"
+    "@biomejs/biome": "1.1.2",
+    "bun-types": "1.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "14.0.1"
   },
   "peerDependencies": {
     "typescript": "5.2.2"
@@ -26,8 +33,7 @@
   "engines": {
     "bun": ">=1.0.0"
   },
-  "exports": {
-    ".": "./src/index.ts"
-  },
-  "types": "./src/index.ts"
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "bun lint"
+  }
 }
