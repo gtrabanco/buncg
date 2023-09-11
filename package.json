@@ -15,8 +15,9 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "lint": "bunx biome check",
-    "fmt": "bunx biome format"
+    "check": "bunx biome check src __test__",
+    "lint": "bunx biome check --apply src __test__",
+    "fmt": "bunx biome format --write src __test__"
   },
   "dependencies": {
     "elysia": "0.6.21"

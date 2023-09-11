@@ -2,9 +2,9 @@
 # shellcheck disable=SC1091
 . "$(dirname -- "$0")/_/husky.sh"
 
-# bun format
-# bun lint
+bun fmt
+bun lint
 
-# if git status -sb | grep -qis '[ts|js]$'; then
-#   bun test
-# fi
+if git status -sb | grep -qis '[ts|js]$'; then
+  bun test
+fi
