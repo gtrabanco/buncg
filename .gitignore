@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Playground
+# Sometimes you want to test something in a scratchpad kind of way, and it's
+# nice to have that available in the repo.
+**/playground*.{ts,json,js,jsx,tsx,md,html,txt}

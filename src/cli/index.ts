@@ -1,5 +1,4 @@
 #!/usr/bin/env bun --watch
-// npm_* vars including npm_config_user_agent only present when run via "bun run"/"bunx" or similar
 import { join } from "path";
 import { App, config } from "../index";
 

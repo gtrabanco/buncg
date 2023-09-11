@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# shellcheck disable=SC1091
+. "$(dirname -- "$0")/_/husky.sh"
+
+bun fmt
+bun lint
+
+if git status -sb | grep -qis '[ts|js]$'; then
+  bun test
+fi
