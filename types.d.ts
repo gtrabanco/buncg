@@ -1,4 +1,3 @@
-import { App } from "./src";
 
 export type BunCG = {
   config: BunCGConfig;
@@ -7,5 +6,5 @@ export type BunCG = {
 declare global {
   declare interface Window { buncg: BunCG; }
   declare type buncg = BunCG;
-  declare type App = typeof App;
+  declare type App = App;
 }

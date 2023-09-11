@@ -13,9 +13,15 @@ const BUNCG_CONFIG_FILE = getSomeExtensionsFile([join(CWD, '.meta'), join(CWD, '
 (globalThis as any).buncg ??= {} as BunCG;
 (globalThis as any).buncg.config = BUNCG_CONFIG_FILE ? await loadConfigFile(BUNCG_CONFIG_FILE, defaultConfig) : defaultConfig;
 
+export let endpointAddress = '';
 export const config = (globalThis as any).buncg.config as BunCG["config"];
-export const App = new Elysia(config.elysia).listen(config.serve);
-App.get('example', () => 'Temporary sample output');
+export const App = new Elysia(config.elysia).get('example', () => 'Temporary sample output').on('start', (ctx) => {
+  endpointAddress = `${ctx.server!.hostname}:${ctx.server!.port}`;
+  console.log(`🧅 Usin Bun version ${Bun.version}`);
+  console.info(`🦊 Elysia() is running at http://${endpointAddress}`);
+});
+
 export type App = typeof App;
+
 
 

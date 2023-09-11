@@ -65,6 +65,7 @@ Each task has all the subtasks that are needed to be done to complete it which m
 
 - [x] Create a binary to execute and use as server as you do with nextjs and similar frameworks.
 - [ ] Middleware for scenes/pages/endpoints and inject javascript code.
+- [ ] Hot Reload, Watch and normal mode.
 - [ ] Client/Server easy way to exchange information (this means develop the javascript that will be injected).
   - [ ] This also mean a library for server side endpoints, developer should be able to create easily endpoints.
 - [ ] Position elements in the screen.
